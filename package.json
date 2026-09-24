@@ -5,7 +5,7 @@
   "scripts": {
     "prestart": "node scripts/free-ports.js",
     "start": "cross-env NODE_OPTIONS=--no-deprecation concurrently \"nodemon server.js\" \"npm run dev --prefix client\"",
-    "build": "webpack --config client/webpack.config.cjs --mode production"
+    "build": "npm install --prefix client && webpack --config client/webpack.config.cjs --mode production"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +25,7 @@
     "express-xss-sanitizer": "^1.1.1",
     "helmet": "^4.1.0",
     "hpp": "^0.2.3",
-    "jsonwebtoken": "^9.0.2",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.13.6",
     "webpack": "^5.97.1"
   },
